@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.developerss.android.customanimation.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:fontFamily="serif-monospace"
+        android:text="WELCOME"
+        android:textColor="#fff"
+        android:textSize="60sp" />
+
+    <RelativeLayout
+        android:id="@+id/layoutView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/backgroundbox">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:src="@mipmap/ic_launcher"
+            android:transitionName="imageTransition" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@id/image"
+            android:text="Wallpaper Manager"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:transitionName="nameTransition" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/textView1"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@id/image"
+            android:paddingEnd="15dp"
+            android:text="WallpaperManager allows you get the current desired dimension..."
+            android:textSize="12dp"
+            android:transitionName="descTransition" />
+    </RelativeLayout>
+
+</RelativeLayout>
